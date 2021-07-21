@@ -47,4 +47,10 @@ wget https://raw.githubusercontent.com/hax3xploit/EZ-Tmux/master/tmux.conf -O .t
 sleep 1s
 tmux source ~/.tmux.conf
 sleep 2s
-tmux new -d -s mySession;tmux send-keys -t  mySession.0 clear ENTER 'echo  "Press prefix + I (capital i, as in Install - e.g: ctrl+a i) to install the plugins."' ENTER;tmux a -t mySession
+tmux new -d -s mySession;tmux send-keys -t  mySession.0 clear ENTER 'echo  "Press prefix + I (capital i, as in Install - e.g: ctrl+a I) to install the plugins."' ENTER;tmux a -t mySession
+
+/* 
+    1 - Press prefix + I (while in tmux session) to install the plugins.
+    2 - type "tmux source ~/.tmux.conf"
+    3 - Create a new session.
+*/
