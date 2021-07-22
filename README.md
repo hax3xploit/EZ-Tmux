@@ -99,32 +99,32 @@ Key bindings
         <td>⌘⌥↓</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; C-←</code></td>
+        <td><code>&lt;prefix&gt;C-←</code></td>
         <td>Resize pane to the left</td>
         <td>^⌘←</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; C-→</code></td>
+        <td><code>&lt;prefix&gt;C-→</code></td>
         <td>Resize pane to the right</td>
         <td>^⌘→</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; C-↑</code></td>
+        <td><code>&lt;prefix&gt;C-↑</code></td>
         <td>Resize pane to the top</td>
         <td>^⌘↑</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; C-↓</code></td>
+        <td><code>&lt;prefix&gt;C-↓</code></td>
         <td>Resize pane to the bottom</td>
         <td>^⌘↓</td>
     </tr>
     <tr>
-        <td><code>&lt;Shift&gt; →;</code></td>
+        <td><code>&lt;Shift&gt; →</code></td>
         <td>Move to next window</td>
         <td>⌘⇧]</td>
     </tr>
     <tr>
-        <td><code>&lt;Shift&gt; ←;</code></td>
+        <td><code>&lt;Shift&gt; ←</code></td>
         <td>Move to previous window</td>
         <td>⌘⇧[</td>
     </tr>
@@ -139,7 +139,7 @@ Key bindings
         <td>⌘⌥W</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; C-x</code></td>
+        <td><code>&lt;prefix&gt;C-x</code></td>
         <td>Kill other windows but current one (with confirmation)</td>
         <td>-</td>
     </tr>
