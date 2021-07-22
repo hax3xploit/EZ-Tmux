@@ -16,12 +16,22 @@ The final result
 
 >Now every time you get a non-interactive shell, you can simply hit Ctrl-aqq in order to trigger the first binding (Ctrl-aq) and then sending the second part (Ctrl-q).
 
+Installation
+-------------
+Prerequisites:
+- tmux >= "v2.4"
 
+
+To install tmux-config:
+```
+$ git clone https://github.com/hax3xploit/EZ-Tmux
+$ ./EZ-Tmux/install.sh
+```
 Key bindings
------------
+------------
 
 
-><table>
+<table>
     <tr>
         <td nowrap><b>tmux key</b></td>
         <td><b>Description</b></td>
