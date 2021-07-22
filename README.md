@@ -14,7 +14,7 @@ The final result
 =================
 [![asciicast](https://asciinema.org/a/426667.svg)](https://asciinema.org/a/426667)
 
-`Now every time you get a non-interactive shell, you can simply hit Ctrl-aqq in order to trigger the first binding (Ctrl-aq) and then sending the second part (Ctrl-q).`
+>Now every time you get a non-interactive shell, you can simply hit Ctrl-aqq in order to trigger the first binding (Ctrl-aq) and then sending the second part (Ctrl-q).
 
 
 Key bindings
