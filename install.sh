@@ -23,8 +23,9 @@ bar="---------------------------------------"
 echo -e "\n$bar\n\t ${RED}EZ Tmux by @hax_3xploit ${NOCOLOR} \n$bar\n"
 
 echo "Make sure you're root before installing the tools"
-sleep 5s
+sleep 4s
 clear
+echo -e "\n$bar\n\t ${RED}EZ Tmux by @hax_3xploit ${NOCOLOR} \n$bar\n"
 
 echo "${WHITE}Installing all dependencies${WHITE}\n"
 cd
@@ -33,17 +34,17 @@ sudo apt-get install wget -y 2> /dev/null
 sudo apt-get install git -y 2> /dev/null
 
 echo -e "\n$bar\n\t ${LIGHTPURPLE} Dependencies Installed ${LIGHTPURPLE} \n$bar\n"
-echo -e "\t ${GREEN}EZ Tmux ✔️ ${GREEN} \n"
+echo -e "${GREEN}EZ Tmux ✔️ ${GREEN} \n"
 sleep 1s
-echo -e "\t ${GREEN}EZ Wget ✔️ ${GREEN} \n"
+echo -e "${GREEN}EZ Wget ✔️ ${GREEN} \n"
 sleep 1s
-echo -e "\t ${GREEN}EZ Git  ✔️ ${GREEN} \n"
+echo -e "${GREEN}EZ Git  ✔️ ${GREEN} \n"
 
 sleep 2s
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2> /dev/null
 sleep 1s
-wget https://raw.githubusercontent.com/hax3xploit/EZ-Tmux/master/tmux.conf -O .tmux.conf
+wget https://raw.githubusercontent.com/hax3xploit/EZ-Tmux/master/tmux.conf -O .tmux.conf 2> /dev/null
 sleep 1s
 tmux source ~/.tmux.conf
 sleep 2s
