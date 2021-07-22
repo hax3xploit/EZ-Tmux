@@ -50,7 +50,7 @@ Key bindings
     </tr>
     <tr>
         <td><code>Ctrl-q</code></td>
-        <td>Reverse shell to a fully interactive TTY</td>
+        <td>Basic reverse shell to a fully interactive TTY</td>
         <td>-</td>
     </tr>
     <tr>
