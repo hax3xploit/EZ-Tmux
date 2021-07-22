@@ -27,6 +27,14 @@ sleep 4s
 clear
 echo -e "\n$bar\n\t ${RED}EZ Tmux by @hax_3xploit ${NOCOLOR} \n$bar\n"
 
+is_app_installed() {
+    type "$1" &>/dev/null
+}
+
+if ! is_app_installed tmux; then
+    printf "WARNING: \"tmux\" command is not found.\n"
+
+fi
 echo "${WHITE}Installing all dependencies${WHITE}\n"
 cd
 sudo apt-get install tmux -y 2> /dev/null
@@ -34,22 +42,36 @@ sudo apt-get install wget -y 2> /dev/null
 sudo apt-get install git -y 2> /dev/null
 
 echo -e "\n$bar\n\t ${LIGHTPURPLE} Dependencies Installed ${LIGHTPURPLE} \n$bar\n"
-echo -e "${GREEN}EZ Tmux ✔️ ${GREEN} \n"
+echo -e "${GREEN}Tmux ✔️ ${GREEN} \n"
 sleep 1s
-echo -e "${GREEN}EZ Wget ✔️ ${GREEN} \n"
+echo -e "${GREEN}Wget ✔️ ${GREEN} \n"
 sleep 1s
-echo -e "${GREEN}EZ Git  ✔️ ${GREEN} \n"
+echo -e "${GREEN}Git  ✔️ ${GREEN} \n"
 
 sleep 2s
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2> /dev/null
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm 2> /dev/null
 sleep 1s
-wget https://raw.githubusercontent.com/hax3xploit/EZ-Tmux/master/tmux.conf -O .tmux.conf 2> /dev/null
+wget https://raw.githubusercontent.com/hax3xploit/EZ-Tmux/master/tmux.conf -O $HOME/.tmux.conf 2> /dev/null
 sleep 1s
-tmux source ~/.tmux.conf
-sleep 2s
-tmux new -d -s mySession;tmux send-keys -t  mySession.0 clear ENTER 'echo  "Press prefix + I (capital i, as in Install - e.g: ctrl+a I) to install the plugins."' ENTER;tmux a -t mySession
+tmux source $HOME/.tmux.conf
 
+if [ -e "$HOME/.tmux.conf" ]; then
+    printf "Found existing .tmux.conf in your \$HOME directory. Will create a backup at $HOME/.tmux.conf.bak\n"
+fi
+
+cp -f "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak" 2>/dev/null || true
+cp -a ./tmux/. "$HOME"/.tmux/
+ln -sf .tmux/tmux.conf "$HOME"/.tmux.conf;
+sleep 2s
+
+printf "Install TPM plugins\n"
+tmux new -d -s __noop >/dev/null 2>&1 || true 
+tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
+"$HOME"/.tmux/plugins/tpm/bin/install_plugins || true
+tmux kill-session -t __noop >/dev/null 2>&1 || true
+
+printf "OK: Completed\n"
 : '
     1 - Press prefix + I (while in tmux session) to install the plugins.
     2 - type "tmux source ~/.tmux.conf"
