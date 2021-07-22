@@ -35,7 +35,7 @@ if ! is_app_installed tmux; then
     printf "WARNING: \"tmux\" command is not found.\n"
 
 fi
-echo "${RED} Installing all dependencies ${NOCOLOR} \n"
+echo -e "${RED} Installing all dependencies ${NOCOLOR} \n"
 cd
 sudo apt-get install tmux  2>/dev/null
 sudo apt-get install wget 2>/dev/null
@@ -61,11 +61,11 @@ if [ -e "$HOME/.tmux.conf" ]; then
 fi
 
 cp -f "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak" 2>/dev/null || true
-cp -a ./tmux/. "$HOME"/.tmux/
-ln -sf .tmux/tmux.conf "$HOME"/.tmux.conf;
+cp -a ./tmux/. $HOME/.tmux/
+ln -sf .tmux/tmux.conf $HOME/.tmux.conf;
 sleep 2s
 
-printf "Install plugins\n"
+echo -e "\n$bar\n\t ${LIGHTPURPLE}Install plugins ${LIGHTPURPLE}\n"
 tmux new -d -s __noop >/dev/null 2>&1 || true 
 tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
 $HOME/.tmux/plugins/tpm/bin/install_plugins || true
