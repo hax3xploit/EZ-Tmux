@@ -58,7 +58,7 @@ sleep 1s
 
 sleep 2s
 
-echo -e "\n$bar\n\t ${LIGHTPURPLE}Install plugins ${LIGHTPURPLE}\n"
+echo -e "\n$bar\n\t ${LIGHTPURPLE}Install plugins ${LIGHTPURPLE}\n$bar\n"
 tmux new -d -s __noop >/dev/null 2>&1 || true 
 tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
 $HOME/.tmux/plugins/tpm/bin/install_plugins || true
