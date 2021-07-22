@@ -56,8 +56,6 @@ wget https://raw.githubusercontent.com/hax3xploit/EZ-Tmux/master/tmux.conf -O $H
 sleep 1s
 
 
-sleep 2s
-
 echo -e "\n$bar\n\t ${LIGHTPURPLE}Install plugins ${LIGHTPURPLE}\n$bar\n"
 tmux new -d -s __noop >/dev/null 2>&1 || true 
 tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
