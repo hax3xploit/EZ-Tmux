@@ -1,6 +1,6 @@
 EZ Tmux Configuration
 =====================
-`Tmux is a terminal multiplexer command line utility that lets you create/control multiple shells from a single screen. One of its most powerful features is the ability to send keystrokes combinations into the shells automatically. Added to that is the feature that lets me create internal environment variables through which I can convert a non-interactive reverse shell into a interactive one.`
+>Tmux is a terminal multiplexer command line utility that lets you create/control multiple shells from a single screen. One of its most powerful features is the ability to send keystrokes combinations into the shells automatically. Added to that is the feature that lets me create internal environment variables through which I can convert a non-interactive reverse shell into a interactive one.
 
 
 The manual process
@@ -15,6 +15,8 @@ The final result
 [![asciicast](https://asciinema.org/a/426667.svg)](https://asciinema.org/a/426667)
 
 `Now every time you get a non-interactive shell, you can simply hit Ctrl-aqq in order to trigger the first binding (Ctrl-aq) and then sending the second part (Ctrl-q).`
+
+
 Key bindings
 -----------
 
