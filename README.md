@@ -44,8 +44,18 @@ Key bindings
         <td>-</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; C-r</code></td>
-        <td>Reload tmux configuration from ~/.tmux.conf file</td>
+        <td><code>&lt;prefix&gt; Ctrl-q</code></td>
+        <td>Execute python's shell.</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>Ctrl-q</code></td>
+        <td>Reverse shell to a fully interactive TTY</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; R</code></td>
+        <td>Rename current session</td>
         <td>-</td>
     </tr>
     <tr>
