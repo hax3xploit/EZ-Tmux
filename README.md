@@ -54,18 +54,18 @@ Key bindings
         <td>-</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; R</code></td>
+        <td><code>&lt;prefix&gt; Z</code></td>
         <td>Rename current session</td>
         <td>-</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; r</code></td>
+        <td><code>&lt;prefix&gt; z</code></td>
         <td>Rename current window</td>
         <td>-</td>
     </tr>
     <tr>
-        <td><code>&lt;prefix&gt; R</code></td>
-        <td>Rename current session</td>
+        <td><code>&lt;prefix&gt; r</code></td>
+        <td>Reloads the configuration/td>
         <td>-</td>
     </tr>
     <tr>
