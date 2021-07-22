@@ -66,8 +66,3 @@ tmux kill-session -t __noop >/dev/null 2>&1 || true
 
 printf "OK: Completed\n"
 tmux source $HOME/.tmux.conf
-: '
-    1 - Press prefix + I (while in tmux session) to install the plugins.
-    2 - type "tmux source ~/.tmux.conf"
-    3 - Create a new session.
-'
