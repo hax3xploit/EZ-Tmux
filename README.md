@@ -1,5 +1,5 @@
-EZ Tmux Configuration
-=====================
+EZ Tmux 
+========
 >Tmux is a terminal multiplexer command line utility that lets you create/control multiple shells from a single screen. One of its most powerful features is the ability to send keystrokes combinations into the shells automatically. Added to that is the feature that lets me create internal environment variables through which I can convert a non-interactive reverse shell into a interactive one.
 
 
