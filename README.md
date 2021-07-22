@@ -19,28 +19,125 @@ The final result
 
 Key bindings
 -----------
-| tmux key     | Description                                                                                                                                                                                                                   | iTerm2 key |
-|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| C-a          | Default prefix, used instead of "C-b". Same prefix is used in screen program, and it's easy to type. The only drawback of "C-a" is that underlying shell does not receive the keystroke to move to the beginning of the line. | -          |
-| <prefix> C-r | Reload tmux configuration from ~/.tmux.conf file                                                                                                                                                                              | -          |
-| <prefix> r   | Rename current window                                                                                                                                                                                                         | -          |
-| <prefix> R   | Rename current session                                                                                                                                                                                                        | -          |
-| <prefix> _   | Split new pane horizontally                                                                                                                                                                                                   | ⌘⇧D        |
-| <prefix> |   | Split new pane vertically                                                                                                                                                                                                     | ⌘D         |
-| <Ctrl> ←     | Select pane on the left                                                                                                                                                                                                       | ⌘⌥←        |
-| <Ctrl> →     | Select pane on the right                                                                                                                                                                                                      | ⌘⌥→        |
-| <Ctrl> ↑     | Select pane on the top                                                                                                                                                                                                        | ⌘⌥↑        |
-| <Ctrl> ↓     | Select pane on the bottom                                                                                                                                                                                                     | ⌘⌥↓        |
-| <prefix> C-← | Resize pane to the left                                                                                                                                                                                                       | ^⌘←        |
-| <prefix> C-→ | Resize pane to the right                                                                                                                                                                                                      | ^⌘→        |
-| <prefix> C-↑ | Resize pane to the top                                                                                                                                                                                                        | ^⌘↑        |
-| <prefix> C-↓ | Resize pane to the bottom                                                                                                                                                                                                     | ^⌘↓        |
-| <Shift> →;   | Move to next window                                                                                                                                                                                                           | ⌘⇧]        |
-| <Shift> ←;   | Move to previous window                                                                                                                                                                                                       | ⌘⇧[        |
-| <prefix> x   | Kill current pane                                                                                                                                                                                                             | ⌘W         |
-| <prefix> X   | Kill current window                                                                                                                                                                                                           | ⌘⌥W        |
-| <prefix> C-x | Kill other windows but current one (with confirmation)                                                                                                                                                                        | -          |
-| <prefix> Q   | Kill current session (with confirmation)                                                                                                                                                                                      | -          |
-| <prefix> d   | Detach from session                                                                                                                                                                                                           | -          |
-| <prefix> D   | Detach other clients except current one from session                                                                                                                                                                          | -          |
+
+If you are an iTerm2 user, third column describes the keybinding of similar  "action" in iTerm2. It's possible to reuse very same keys you already get used to and tell iTerm2 to execute analogous tmux actions. See [iTerm2 and tmux integration](#iterm2-and-tmux-integration) section below.
+
+<table>
+    <tr>
+        <td nowrap><b>tmux key</b></td>
+        <td><b>Description</b></td>
+        <td><b>iTerm2 key</b></td>
+    </tr>
+    <tr>
+        <td nowrap><code>C-a</code></td>
+        <td>Default prefix, used instead of "C-b". Same prefix is used in screen program, and it's easy to type. The only drawback of "C-a" is that underlying shell does not receive the keystroke to move to the beginning of the line.
+        </td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; C-r</code></td>
+        <td>Reload tmux configuration from ~/.tmux.conf file</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; r</code></td>
+        <td>Rename current window</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; R</code></td>
+        <td>Rename current session</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; _</code></td>
+        <td>Split new pane horizontally</td>
+        <td>⌘⇧D</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; |</code></td>
+        <td>Split new pane vertically</td>
+        <td>⌘D</td>
+    </tr>
+    <tr>
+        <td><code>&lt;Ctrl&gt; ←</code></td>
+        <td>Select pane on the left</td>
+        <td>⌘⌥←</td>
+    </tr>
+    <tr>
+        <td><code>&lt;Ctrl&gt; →</code></td>
+        <td>Select pane on the right</td>
+        <td>⌘⌥→</td>
+    </tr>
+    <tr>
+        <td><code>&lt;Ctrl&gt; ↑</code></td>
+        <td>Select pane on the top</td>
+        <td>⌘⌥↑</td>
+    </tr>
+    <tr>
+        <td><code>&lt;Ctrl&gt; ↓</code></td>
+        <td>Select pane on the bottom</td>
+        <td>⌘⌥↓</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; C-←</code></td>
+        <td>Resize pane to the left</td>
+        <td>^⌘←</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; C-→</code></td>
+        <td>Resize pane to the right</td>
+        <td>^⌘→</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; C-↑</code></td>
+        <td>Resize pane to the top</td>
+        <td>^⌘↑</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; C-↓</code></td>
+        <td>Resize pane to the bottom</td>
+        <td>^⌘↓</td>
+    </tr>
+    <tr>
+        <td><code>&lt;Shift&gt; →;</code></td>
+        <td>Move to next window</td>
+        <td>⌘⇧]</td>
+    </tr>
+    <tr>
+        <td><code>&lt;Shift&gt; ←;</code></td>
+        <td>Move to previous window</td>
+        <td>⌘⇧[</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; x</code></td>
+        <td>Kill current pane</td>
+        <td>⌘W</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; X</code></td>
+        <td>Kill current window</td>
+        <td>⌘⌥W</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; C-x</code></td>
+        <td>Kill other windows but current one (with confirmation)</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; Q</code></td>
+        <td>Kill current session (with confirmation)</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; d</code></td>
+        <td>Detach from session</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td><code>&lt;prefix&gt; D</code></td>
+        <td>Detach other clients except current one from session</td>
+        <td>-</td>
+    </tr>
+</table>
 
