@@ -6,7 +6,7 @@ EZ Tmux
 The manual process
 ===================
 
-[![asciicast](https://asciinema.org/a/426655.svg)](https://asciinema.org/a/426655)
+[![asciicast](https://asciinema.org/a/426770.svg)](https://asciinema.org/a/426770)
 
 
 
