@@ -54,15 +54,8 @@ git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm 2> /dev/nu
 sleep 1s
 wget https://raw.githubusercontent.com/hax3xploit/EZ-Tmux/master/tmux.conf -O $HOME/.tmux.conf 2> /dev/null
 sleep 1s
-tmux source $HOME/.tmux.conf
 
-if [ -e "$HOME/.tmux.conf" ]; then
-    printf "Found existing .tmux.conf in your \$HOME directory. Will create a backup at $HOME/.tmux.conf.bak\n"
-fi
 
-cp -f "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak" 2>/dev/null || true
-cp -a ./tmux/. $HOME/.tmux/
-ln -sf .tmux/tmux.conf $HOME/.tmux.conf;
 sleep 2s
 
 echo -e "\n$bar\n\t ${LIGHTPURPLE}Install plugins ${LIGHTPURPLE}\n"
@@ -72,6 +65,7 @@ $HOME/.tmux/plugins/tpm/bin/install_plugins || true
 tmux kill-session -t __noop >/dev/null 2>&1 || true
 
 printf "OK: Completed\n"
+tmux source $HOME/.tmux.conf
 : '
     1 - Press prefix + I (while in tmux session) to install the plugins.
     2 - type "tmux source ~/.tmux.conf"
