@@ -19,8 +19,6 @@ The final result
 
 Key bindings
 -----------
-
-
 <table>
     <tr>
         <td nowrap><b>tmux key</b></td>
