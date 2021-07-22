@@ -20,9 +20,8 @@ The final result
 Key bindings
 -----------
 
-If you are an iTerm2 user, third column describes the keybinding of similar  "action" in iTerm2. It's possible to reuse very same keys you already get used to and tell iTerm2 to execute analogous tmux actions. See [iTerm2 and tmux integration](#iterm2-and-tmux-integration) section below.
 
-<table>
+><table>
     <tr>
         <td nowrap><b>tmux key</b></td>
         <td><b>Description</b></td>
