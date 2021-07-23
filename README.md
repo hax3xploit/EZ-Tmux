@@ -1,6 +1,6 @@
 EZ Tmux 
 ========
->Tmux is a terminal multiplexer command line utility that lets you create/control multiple shells from a single screen. One of its most powerful features is the ability to send keystrokes combinations into the shells automatically. Added to that is the feature that lets me create internal environment variables through which I can convert a non-interactive reverse shell into a interactive one.
+tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. It has the ability to send keystrokes into the shells automatically. Through this feature, let's create internal environment variables through which we can convert a non-interactive reverse shell into an interactive one.
 
 
 The manual process
