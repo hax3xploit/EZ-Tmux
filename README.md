@@ -45,7 +45,7 @@ Key bindings
     </tr>
     <tr>
         <td><code>&lt;prefix&gt; Ctrl-q</code></td>
-        <td>Execute python's shell.</td>
+        <td>Spawn python's shell.</td>
         <td>-</td>
     </tr>
     <tr>
