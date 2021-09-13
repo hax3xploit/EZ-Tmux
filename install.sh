@@ -37,16 +37,16 @@ if ! is_app_installed tmux; then
 fi
 echo -e "${RED} Installing all dependencies ${NOCOLOR} \n"
 cd
-sudo apt-get install tmux  2>/dev/null
-sudo apt-get install wget 2>/dev/null
-sudo apt-get install git  2>/dev/null
+sudo apt-get install tmux -y  2>/dev/null
+sudo apt-get install wget  -y 2>/dev/null
+sudo apt-get install git  -y 2>/dev/null
 
-echo -e "\n$bar\n\t ${LIGHTPURPLE} Dependencies Installed ${LIGHTPURPLE} \n$bar\n"
-echo -e "${GREEN}Tmux ✔️ ${GREEN} \n"
+echo -e "\n$bar\n\t ${LIGHTPURPLE} Dependencies Installed ${NOCOLOR} \n$bar\n"
+echo -e "${GREEN}Tmux ✔️ ${NOCOLOR} \n"
 sleep 1s
-echo -e "${GREEN}Wget ✔️ ${GREEN} \n"
+echo -e "${GREEN}Wget ✔️ ${NOCOLOR} \n"
 sleep 1s
-echo -e "${GREEN}Git  ✔️ ${GREEN} \n"
+echo -e "${GREEN}Git  ✔️ ${NOCOLOR} \n"
 
 sleep 2s
 
@@ -56,7 +56,7 @@ wget https://raw.githubusercontent.com/hax3xploit/EZ-Tmux/master/tmux.conf -O $H
 sleep 1s
 
 
-echo -e "\n$bar\n\t ${LIGHTPURPLE}Install plugins ${LIGHTPURPLE}\n$bar\n"
+echo -e "\n$bar\n\t ${LIGHTPURPLE}Install plugins ${NOCOLOR}\n$bar\n"
 tmux new -d -s __noop >/dev/null 2>&1 || true 
 tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
 $HOME/.tmux/plugins/tpm/bin/install_plugins || true
